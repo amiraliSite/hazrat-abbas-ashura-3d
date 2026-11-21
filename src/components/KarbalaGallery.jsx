@@ -1,24 +1,73 @@
 import React, { useState } from 'react';
-import { motion } from 'motion/react';
 import { SHRINE_MEDIA } from '../data/shrineMedia';
+
+function TiltMosaicCard({ card, spanClass }) {
+  const [tilt, setTilt] = useState({ rx: 0, ry: 0 });
+
+  const handleMouseMove = (e) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width - 0.5;
+    const y = (e.clientY - rect.top) / rect.height - 0.5;
+    setTilt({ rx: -y * 8, ry: x * 8 });
+  };
+
+  const handleMouseLeave = () => setTilt({ rx: 0, ry: 0 });
+
+  return (
+    <div className={`perspective-stage ${spanClass}`}>
+      <article
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+        style={{
+          transform: `rotateX(${tilt.rx}deg) rotateY(${tilt.ry}deg)`,
+          transition: 'transform 160ms ease-out',
+        }}
+        className="group relative h-full min-h-[260px] rounded-2xl overflow-hidden bg-stone-950 border border-amber-500/45 dark:border-amber-400/35 imperial-3d-panel"
+      >
+        <img
+          src={SHRINE_MEDIA[card.key]}
+          alt={card.title}
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
+
+        <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6 space-y-1.5">
+          <span className="inline-block px-2.5 py-1 rounded-md bg-rose-800/90 text-amber-100 text-[11px] font-bold border border-amber-300/30">
+            {card.tag}
+          </span>
+          <h3 className="font-persian-display text-xl sm:text-2xl text-amber-100 leading-snug">
+            {card.title}
+          </h3>
+          <p className="text-xs sm:text-sm text-stone-200/90 leading-relaxed">
+            {card.description}
+          </p>
+        </div>
+      </article>
+    </div>
+  );
+}
 
 export default function KarbalaGallery({ t }) {
   const cards = t.gallery.cards;
-  const [activeId, setActiveId] = useState(cards[0].id);
-  const featured = cards.find((c) => c.id === activeId) || cards[0];
+  const spans = [
+    'lg:col-span-7 lg:row-span-2 min-h-[380px]',
+    'lg:col-span-5',
+    'lg:col-span-5',
+    'lg:col-span-6',
+    'lg:col-span-6',
+  ];
 
   return (
     <section
       id="gallery"
-      className="py-16 sm:py-24 px-4 sm:px-6 bg-[#F3EDE0]/60 dark:bg-[#0E171B] border-y border-amber-700/15 dark:border-amber-400/15"
+      className="py-16 sm:py-24 px-4 sm:px-6 bg-[#F2E9E4]/65 dark:bg-[#0B0E1A] border-y border-rose-900/15 dark:border-amber-400/15"
     >
       <div className="max-w-7xl mx-auto space-y-10">
-        {/* Heading */}
         <div className="space-y-2 max-w-3xl">
-          <p className="text-xs sm:text-sm font-bold text-emerald-800 dark:text-emerald-300">
+          <p className="text-xs sm:text-sm font-bold text-rose-800 dark:text-amber-400">
             {t.gallery.kicker}
           </p>
-          <h2 className="font-persian-display text-3xl sm:text-4xl lg:text-5xl text-stone-900 dark:text-amber-100">
+          <h2 className="font-persian-display text-3xl sm:text-4xl lg:text-5xl text-rose-950 dark:text-amber-50">
             {t.gallery.title}
           </h2>
           <p className="text-sm sm:text-base text-stone-700 dark:text-stone-300 leading-relaxed">
@@ -26,73 +75,14 @@ export default function KarbalaGallery({ t }) {
           </p>
         </div>
 
-        {/* 2-Column Curatorial Gallery Composition */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
-          {/* Featured Large Sacred Canvas */}
-          <motion.div
-            key={featured.id}
-            initial={{ opacity: 0.7, scale: 0.99 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.35 }}
-            className="lg:col-span-7 rounded-2xl overflow-hidden bg-[#FAF6EC] dark:bg-[#131F25] border border-amber-700/25 dark:border-amber-400/25 sculpted-3d-card flex flex-col"
-          >
-            <div className="relative aspect-[16/10] w-full overflow-hidden bg-stone-900">
-              <img
-                src={SHRINE_MEDIA[featured.key]}
-                alt={featured.title}
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-stone-950/70 via-transparent to-transparent" />
-              <span className="absolute top-4 start-4 px-3 py-1.5 rounded-lg bg-stone-950/80 text-amber-200 border border-amber-400/30 text-xs font-bold">
-                {featured.tag}
-              </span>
-            </div>
-
-            <div className="p-6 sm:p-7 space-y-2.5 flex-1 flex flex-col justify-center">
-              <h3 className="font-persian-display text-2xl sm:text-3xl text-stone-900 dark:text-amber-100">
-                {featured.title}
-              </h3>
-              <p className="text-sm sm:text-base text-stone-700 dark:text-stone-300 leading-relaxed">
-                {featured.description}
-              </p>
-            </div>
-          </motion.div>
-
-          {/* Interactive Thumbnails Selector List */}
-          <div className="lg:col-span-5 flex flex-col gap-3">
-            {cards.map((card) => {
-              const isSelected = card.id === featured.id;
-              return (
-                <button
-                  key={card.id}
-                  type="button"
-                  onClick={() => setActiveId(card.id)}
-                  className={`sculpted-3d-btn w-full text-start p-3 rounded-2xl border flex items-center gap-4 cursor-pointer ${
-                    isSelected
-                      ? 'bg-gradient-to-l from-amber-500/20 to-emerald-800/15 dark:from-amber-500/20 dark:to-emerald-700/20 border-amber-600/60 dark:border-amber-400/50'
-                      : 'bg-[#FAF6EC] dark:bg-[#131F25] border-amber-700/15 dark:border-white/10 hover:border-amber-500/40'
-                  }`}
-                >
-                  <img
-                    src={SHRINE_MEDIA[card.key]}
-                    alt={card.title}
-                    className="w-24 h-16 sm:w-28 sm:h-20 rounded-xl object-cover shrink-0 border border-amber-700/20"
-                  />
-                  <div className="space-y-1 min-w-0">
-                    <span className="block text-[11px] font-bold text-emerald-800 dark:text-emerald-300">
-                      {card.tag}
-                    </span>
-                    <h4 className="font-bold text-sm sm:text-base text-stone-900 dark:text-amber-100 truncate">
-                      {card.title}
-                    </h4>
-                    <p className="text-xs text-stone-600 dark:text-stone-400 line-clamp-2">
-                      {card.description}
-                    </p>
-                  </div>
-                </button>
-              );
-            })}
-          </div>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-5">
+          {cards.map((card, idx) => (
+            <TiltMosaicCard
+              key={card.id}
+              card={card}
+              spanClass={spans[idx] || 'lg:col-span-4'}
+            />
+          ))}
         </div>
       </div>
     </section>

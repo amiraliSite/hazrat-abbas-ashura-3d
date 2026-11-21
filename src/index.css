@@ -6,11 +6,6 @@
     --font-display: 'Lalezar', 'Vazirmatn', system-ui, sans-serif;
     --font-body: 'Vazirmatn', system-ui, sans-serif;
     --font-sacred: 'Amiri', 'Vazirmatn', serif;
-
-    --surface-day-bg: #FBF8F1;
-    --surface-day-card: #F3EDE0;
-    --surface-night-bg: #0B1114;
-    --surface-night-card: #121D22;
   }
 
   html {
@@ -33,76 +28,83 @@
   font-family: var(--font-sacred);
 }
 
-/* Luxury 3D Sculpted Surfaces — Light & Dark Dual Support */
-.luxury-3d-bar {
-  background: linear-gradient(145deg, rgba(255, 252, 245, 0.94), rgba(240, 232, 214, 0.92));
-  border: 1px solid rgba(180, 83, 9, 0.28);
+/* Imperial Karbala 3D Sculpted Bar & Surfaces (Aqiq Crimson + Shrine Brass + Midnight Indigo) */
+.imperial-3d-bar {
+  background: linear-gradient(145deg, rgba(255, 249, 246, 0.94), rgba(242, 232, 227, 0.92));
+  border: 1px solid rgba(159, 18, 57, 0.25);
   box-shadow:
-    0 18px 40px -12px rgba(28, 25, 23, 0.16),
-    0 4px 0 0 rgba(180, 83, 9, 0.18),
-    inset 0 1px 0 0 rgba(255, 255, 255, 0.9);
+    0 18px 40px -12px rgba(45, 16, 26, 0.16),
+    0 5px 0 0 rgba(159, 18, 57, 0.16),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.95);
 }
 
-.dark .luxury-3d-bar {
-  background: linear-gradient(145deg, rgba(18, 29, 34, 0.94), rgba(11, 17, 20, 0.96));
-  border: 1px solid rgba(245, 158, 11, 0.28);
+.dark .imperial-3d-bar {
+  background: linear-gradient(145deg, rgba(16, 20, 38, 0.95), rgba(9, 11, 22, 0.97));
+  border: 1px solid rgba(234, 179, 8, 0.28);
   box-shadow:
-    0 20px 44px -10px rgba(0, 0, 0, 0.65),
-    0 4px 0 0 rgba(146, 64, 14, 0.45),
-    inset 0 1px 0 0 rgba(253, 230, 138, 0.14);
+    0 22px 48px -12px rgba(0, 0, 0, 0.72),
+    0 5px 0 0 rgba(136, 19, 55, 0.5),
+    inset 0 1px 0 0 rgba(253, 224, 71, 0.14);
 }
 
-.sculpted-3d-btn {
-  transition: transform 180ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 180ms cubic-bezier(0.22, 1, 0.36, 1), background-color 200ms ease;
+.imperial-3d-btn {
+  transition: transform 180ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 180ms cubic-bezier(0.22, 1, 0.36, 1), filter 180ms ease;
   box-shadow:
-    0 4px 0 0 rgba(146, 64, 14, 0.26),
-    0 8px 16px -6px rgba(28, 25, 23, 0.14),
-    inset 0 1px 0 0 rgba(255, 255, 255, 0.7);
+    0 4px 0 0 rgba(136, 19, 55, 0.28),
+    0 10px 18px -8px rgba(45, 16, 26, 0.18),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.72);
 }
 
-.dark .sculpted-3d-btn {
+.dark .imperial-3d-btn {
   box-shadow:
-    0 4px 0 0 rgba(120, 53, 15, 0.55),
-    0 10px 18px -6px rgba(0, 0, 0, 0.55),
-    inset 0 1px 0 0 rgba(253, 230, 138, 0.16);
+    0 4px 0 0 rgba(136, 19, 55, 0.6),
+    0 12px 22px -8px rgba(0, 0, 0, 0.65),
+    inset 0 1px 0 0 rgba(253, 224, 71, 0.18);
 }
 
-.sculpted-3d-btn:hover {
+.imperial-3d-btn:hover {
   transform: translateY(-2px);
 }
 
-.sculpted-3d-btn:active {
+.imperial-3d-btn:active {
   transform: translateY(2px);
   box-shadow:
-    0 1px 0 0 rgba(146, 64, 14, 0.35),
+    0 1px 0 0 rgba(136, 19, 55, 0.4),
     inset 0 1px 0 0 rgba(255, 255, 255, 0.4);
 }
 
-.sculpted-3d-card {
+.imperial-3d-panel {
   box-shadow:
-    0 16px 36px -14px rgba(28, 25, 23, 0.14),
-    0 6px 0 0 rgba(180, 83, 9, 0.12),
-    inset 0 1px 0 0 rgba(255, 255, 255, 0.75);
+    0 22px 50px -16px rgba(45, 16, 26, 0.15),
+    0 6px 0 0 rgba(159, 18, 57, 0.14),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.8);
 }
 
-.dark .sculpted-3d-card {
+.dark .imperial-3d-panel {
   box-shadow:
-    0 20px 44px -12px rgba(0, 0, 0, 0.55),
-    0 6px 0 0 rgba(146, 64, 14, 0.28),
-    inset 0 1px 0 0 rgba(253, 230, 138, 0.1);
+    0 26px 56px -14px rgba(0, 0, 0, 0.65),
+    0 6px 0 0 rgba(136, 19, 55, 0.35),
+    inset 0 1px 0 0 rgba(253, 224, 71, 0.12);
+}
+
+.perspective-stage {
+  perspective: 1400px;
 }
 
 .perspective-drawer {
   perspective: 1200px;
 }
 
-/* Subtle Islamic Geometric Background Filigree */
-.sacred-lattice-bg {
-  background-image: radial-gradient(rgba(217, 119, 6, 0.08) 1px, transparent 1px);
-  background-size: 28px 28px;
+.karbala-geometric-grid {
+  background-image:
+    linear-gradient(to right, rgba(159, 18, 57, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(159, 18, 57, 0.045) 1px, transparent 1px);
+  background-size: 40px 40px;
 }
 
-.dark .sacred-lattice-bg {
-  background-image: radial-gradient(rgba(245, 158, 11, 0.09) 1px, transparent 1px);
-  background-size: 28px 28px;
+.dark .karbala-geometric-grid {
+  background-image:
+    linear-gradient(to right, rgba(234, 179, 8, 0.055) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(234, 179, 8, 0.055) 1px, transparent 1px);
+  background-size: 40px 40px;
 }
