@@ -1,0 +1,6 @@
+{
+  "name": "Qamar Bani Hashim — حضرت عباس (ع) و عاشورا",
+  "description": "Interactive 3D bilingual (Persian & Arabic) memorial and architectural shrine experience honoring Hazrat Abbas ibn Ali (ع) and the legacy of Ashura in Karbala.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
