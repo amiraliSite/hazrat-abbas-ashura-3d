@@ -29,7 +29,7 @@ export default function KarbalaChronicle({ t }) {
             return (
               <motion.article
                 key={stage.num}
-                initial={{ opacity: 0, y: 24 }}
+                initial={{ opacity: 1, y: 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.45 }}

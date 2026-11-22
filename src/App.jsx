@@ -48,7 +48,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#FAF5F2] dark:bg-[#07080F] text-[#1D1216] dark:text-[#F8F3EC] transition-colors duration-300">
+    <div className="min-h-screen overflow-x-clip bg-[#FAF5F2] dark:bg-[#07080F] text-[#1D1216] dark:text-[#F8F3EC] transition-colors duration-300">
       <Navbar
         t={t}
         lang={lang}

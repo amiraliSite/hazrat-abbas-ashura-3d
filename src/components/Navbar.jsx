@@ -59,12 +59,12 @@ export default function Navbar({
     <>
       <header
         className={`fixed top-0 inset-x-0 z-40 transition-all duration-300 ${
-          scrolled ? 'pt-2 px-3 sm:px-5' : 'pt-3 sm:pt-4 px-3 sm:px-6'
+          scrolled ? 'pt-2 px-2.5 sm:px-4' : 'pt-2.5 sm:pt-4 px-2.5 sm:px-5'
         }`}
       >
         <nav
           aria-label="Primary"
-          className="max-w-7xl mx-auto imperial-3d-bar rounded-2xl px-3 sm:px-5 py-2.5 flex items-center justify-between gap-3"
+          className="max-w-7xl mx-auto imperial-3d-bar rounded-2xl px-2.5 sm:px-4 py-2 flex items-center justify-between gap-2 min-w-0"
         >
           {/* Brand Crest */}
           <a
@@ -73,27 +73,23 @@ export default function Navbar({
               e.preventDefault();
               handleJump('sanctuary');
             }}
-            className="flex items-center gap-3 shrink-0 group"
+            className="flex items-center gap-2 sm:gap-2.5 min-w-0 shrink group"
           >
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-rose-700 via-rose-900 to-amber-600 flex items-center justify-center shadow-[0_4px_0_0_rgba(136,19,55,0.5)] group-hover:-translate-y-0.5 transition-transform border border-amber-300/45">
-              <svg viewBox="0 0 32 32" className="w-6 h-6 text-amber-100" fill="currentColor" aria-hidden="true">
-                <path d="M16 4c4.4 5 7 9.2 7 14H9c0-4.8 2.6-9 7-14z" />
-                <rect x="8" y="20" width="16" height="7" rx="2" />
-                <circle cx="16" cy="2.5" r="1.4" />
-              </svg>
-            </div>
-            <div className="flex flex-col">
-              <span className="font-persian-display text-xl sm:text-2xl leading-none text-rose-950 dark:text-amber-100">
+            <span className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-rose-700 via-rose-800 to-amber-600 text-amber-100 flex items-center justify-center border border-amber-300/40 shadow-md shrink-0 font-persian-display text-lg sm:text-xl">
+              ع
+            </span>
+            <div className="min-w-0">
+              <span className="block font-persian-display text-base sm:text-lg xl:text-xl leading-none text-rose-950 dark:text-amber-100 truncate">
                 {t.brandTitle}
               </span>
-              <span className="hidden sm:block text-[11px] font-semibold text-rose-800 dark:text-amber-400/90 mt-1">
+              <span className="hidden 2xl:block text-[11px] font-semibold text-rose-800 dark:text-amber-400/90 mt-1 truncate">
                 {t.brandSubtitle}
               </span>
             </div>
           </a>
 
-          {/* Desktop 3D Bevel Navigation */}
-          <div className="hidden lg:flex items-center gap-1.5 bg-rose-950/5 dark:bg-black/40 p-1.5 rounded-xl border border-rose-900/15 dark:border-amber-400/20">
+          {/* Desktop & Laptop 3D Bevel Navigation */}
+          <div className="hidden lg:flex items-center gap-1 bg-rose-950/5 dark:bg-black/40 p-1 rounded-xl border border-rose-900/15 dark:border-amber-400/20 min-w-0">
             {navItems.map((item) => {
               const Icon = item.icon;
               const isActive = activeSection === item.id;
@@ -102,13 +98,13 @@ export default function Navbar({
                   key={item.id}
                   type="button"
                   onClick={() => handleJump(item.id)}
-                  className={`imperial-3d-btn px-3 py-2 rounded-lg text-sm font-bold flex items-center gap-1.5 cursor-pointer whitespace-nowrap ${
+                  className={`imperial-3d-btn px-2 xl:px-2.5 py-1.5 rounded-lg text-xs xl:text-[13px] font-bold flex items-center gap-1 cursor-pointer whitespace-nowrap shrink-0 ${
                     isActive
                       ? 'bg-gradient-to-b from-rose-700 to-rose-900 text-amber-50 border border-amber-300/60'
                       : 'bg-white/95 dark:bg-[#14192E] text-rose-950 dark:text-stone-200 hover:bg-rose-50 dark:hover:bg-[#1C2340] border border-rose-900/15 dark:border-white/10'
                   }`}
                 >
-                  <Icon className="w-4 h-4 shrink-0" />
+                  <Icon className="w-3.5 h-3.5 shrink-0" />
                   <span>{item.label}</span>
                 </button>
               );
@@ -116,19 +112,19 @@ export default function Navbar({
           </div>
 
           {/* Theme + Language + Mobile/Tablet 3D Drawer Button */}
-          <div className="flex items-center gap-2 shrink-0">
+          <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
             <button
               type="button"
               onClick={onToggleTheme}
               aria-label={isDark ? t.controls.dayMode : t.controls.nightMode}
-              className="imperial-3d-btn px-2.5 sm:px-3 py-2 rounded-xl bg-white/95 dark:bg-[#14192E] border border-rose-800/25 dark:border-amber-400/30 text-rose-950 dark:text-amber-200 flex items-center gap-1.5 text-xs sm:text-sm font-bold cursor-pointer"
+              className="imperial-3d-btn px-2 sm:px-2.5 py-2 rounded-xl bg-white/95 dark:bg-[#14192E] border border-rose-800/25 dark:border-amber-400/30 text-rose-950 dark:text-amber-200 flex items-center gap-1.5 text-xs font-bold cursor-pointer whitespace-nowrap"
             >
               {isDark ? (
-                <Sun className="w-4 h-4 text-amber-400" />
+                <Sun className="w-4 h-4 text-amber-400 shrink-0" />
               ) : (
-                <Moon className="w-4 h-4 text-rose-800" />
+                <Moon className="w-4 h-4 text-rose-800 shrink-0" />
               )}
-              <span className="hidden sm:inline">
+              <span className="hidden xl:inline">
                 {isDark ? t.controls.dayMode : t.controls.nightMode}
               </span>
             </button>
@@ -136,9 +132,9 @@ export default function Navbar({
             <button
               type="button"
               onClick={onToggleLang}
-              className="imperial-3d-btn px-2.5 sm:px-3 py-2 rounded-xl bg-gradient-to-b from-amber-500 to-amber-700 text-stone-950 border border-amber-200/50 flex items-center gap-1.5 text-xs sm:text-sm font-extrabold cursor-pointer"
+              className="imperial-3d-btn px-2 sm:px-2.5 py-2 rounded-xl bg-gradient-to-b from-amber-500 to-amber-700 text-stone-950 border border-amber-200/50 flex items-center gap-1 text-xs font-extrabold cursor-pointer whitespace-nowrap"
             >
-              <Languages className="w-4 h-4 text-stone-950" />
+              <Languages className="w-4 h-4 text-stone-950 shrink-0" />
               <span>{lang === 'fa' ? t.controls.switchToArabic : t.controls.switchToPersian}</span>
             </button>
 
@@ -146,7 +142,7 @@ export default function Navbar({
               type="button"
               onClick={() => setDrawerOpen(true)}
               aria-label={t.controls.openMenu}
-              className="lg:hidden imperial-3d-btn p-2.5 rounded-xl bg-gradient-to-b from-rose-700 to-rose-900 text-amber-50 border border-amber-300/40 cursor-pointer"
+              className="lg:hidden imperial-3d-btn p-2 rounded-xl bg-gradient-to-b from-rose-700 to-rose-900 text-amber-50 border border-amber-300/40 cursor-pointer shrink-0"
             >
               <Menu className="w-5 h-5" />
             </button>
@@ -166,7 +162,6 @@ export default function Navbar({
               onClick={() => setDrawerOpen(false)}
               className="absolute inset-0 bg-black/70 backdrop-blur-xs"
             />
-
             <motion.aside
               initial={{ x: '100%', rotateY: -16, opacity: 0.5 }}
               animate={{ x: 0, rotateY: 0, opacity: 1 }}
@@ -237,7 +232,6 @@ export default function Navbar({
                   )}
                   <span>{isDark ? t.controls.dayMode : t.controls.nightMode}</span>
                 </button>
-
                 <button
                   type="button"
                   onClick={onToggleLang}
