@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { TRANSLATIONS } from './i18n/sacredTranslations';
 import Navbar from './components/Navbar';
 import HeroShrine from './components/HeroShrine';
+import UmmAlBaninSection from './components/UmmAlBaninSection';
 import KarbalaChronicle from './components/KarbalaChronicle';
 import HadithCollection from './components/HadithCollection';
 import KarbalaGallery from './components/KarbalaGallery';
@@ -28,7 +29,7 @@ export default function App() {
   }, [lang, t.htmlTitle]);
 
   useEffect(() => {
-    const ids = ['sanctuary', 'chronicle', 'hadiths', 'gallery', 'ziyarat', 'creator'];
+    const ids = ['sanctuary', 'umm-al-banin', 'chronicle', 'hadiths', 'gallery', 'ziyarat', 'creator'];
     const observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
@@ -58,7 +59,8 @@ export default function App() {
       />
 
       <main>
-        <HeroShrine t={t} isDark={isDark} />
+        <HeroShrine t={t} lang={lang} isDark={isDark} />
+        <UmmAlBaninSection t={t} />
         <KarbalaChronicle t={t} />
         <HadithCollection t={t} />
         <KarbalaGallery t={t} />

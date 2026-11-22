@@ -8,6 +8,7 @@ import {
   X,
   Compass,
   ScrollText,
+  HeartHandshake,
   BookOpen,
   Image as ImageIcon,
   Flame,
@@ -40,6 +41,7 @@ export default function Navbar({
 
   const navItems = [
     { id: 'sanctuary', label: t.nav.sanctuary, icon: Compass },
+    { id: 'umm-al-banin', label: t.nav.ummAlBanin, icon: HeartHandshake },
     { id: 'chronicle', label: t.nav.chronicle, icon: ScrollText },
     { id: 'hadiths', label: t.nav.hadiths, icon: BookOpen },
     { id: 'gallery', label: t.nav.gallery, icon: ImageIcon },

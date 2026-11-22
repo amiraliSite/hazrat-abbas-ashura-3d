@@ -2,9 +2,10 @@ import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'motion/react';
 import { ChevronLeft, ChevronRight, BookOpen, Flame } from 'lucide-react';
 import { SHRINE_MEDIA } from '../data/shrineMedia';
+import UmmAlBaninCountdownBanner from './UmmAlBaninCountdownBanner';
 import { SacredKarbalaBackdrop3D } from '../scene/SacredKarbalaBackdrop3D';
 
-export default function HeroShrine({ t, isDark }) {
+export default function HeroShrine({ t, lang, isDark }) {
   const backdropRef = useRef(null);
   const sceneRef = useRef(null);
   const slides = t.hero.slides;
@@ -50,6 +51,8 @@ export default function HeroShrine({ t, isDark }) {
       <div className="absolute inset-0 bg-gradient-to-b from-[#FAF5F2]/80 via-[#FAF5F2]/45 to-[#FAF5F2] dark:from-[#07080F]/80 dark:via-[#07080F]/40 dark:to-[#07080F] pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto flex flex-col items-center text-center gap-10">
+        <UmmAlBaninCountdownBanner t={t} lang={lang} />
+
         {/* Centered Majestic Calligraphy Header */}
         <div className="max-w-4xl space-y-5">
           <p className="font-sacred-serif text-lg sm:text-xl font-bold text-rose-800 dark:text-amber-300 tracking-wide">

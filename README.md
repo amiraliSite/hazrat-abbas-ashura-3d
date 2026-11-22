@@ -1,59 +1,77 @@
 <div align="center">
 
-# 🌙 قمر بنی‌هاشم — حضرت ابوالفضل العباس (ع) و حماسه عاشورا
-### *Qamar Bani Hashim — Sacred 3D Interactive Memorial & Ashura Tribute*
+# 🌙 قمر بنی‌هاشم — حضرت ابوالفضل العباس (ع)، یادواره حضرت ام‌البنین (س) و حماسه عاشورا
+
+### *Qamar Bani Hashim & Umm al-Banin (sa) — Sacred 3D Interactive Ashura Memorial*
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-be123c?style=for-the-badge&logo=github)](https://amiralisite.github.io/hazrat-abbas-ashura-3d/)
-[![React JSX](https://img.shields.io/badge/React%2019-JSX-61dafb?style=for-the-badge&logo=react&logoColor=000)](https://react.dev/)
+[![Video 3min](https://img.shields.io/badge/3--Min%20Video-LinkedIn%20HD%20MP4-d97706?style=for-the-badge&logo=youtube)](https://github.com/amiraliSite/hazrat-abbas-ashura-3d/releases/download/v2.0-media/hazrat-abbas-ashura-showcase-3min.mp4)
+[![All Screenshots ZIP](https://img.shields.io/badge/Screenshots%20Pack-1--Click%20ZIP-0f766e?style=for-the-badge&logo=files)](https://github.com/amiraliSite/hazrat-abbas-ashura-3d/releases/download/v2.0-media/hazrat-abbas-ashura-screenshots.zip)
+[![React 19](https://img.shields.io/badge/React%2019-JSX-61dafb?style=for-the-badge&logo=react&logoColor=000)](https://react.dev/)
 [![Three.js](https://img.shields.io/badge/Three.js-WebGL%203D-000000?style=for-the-badge&logo=threedotjs)](https://threejs.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-v4-38bdf8?style=for-the-badge&logo=tailwindcss&logoColor=000)](https://tailwindcss.com/)
-[![Bilingual](https://img.shields.io/badge/Languages-فارسی%20%7C%20العربية-d97706?style=for-the-badge)](https://amiralisite.github.io/hazrat-abbas-ashura-3d/)
+[![Bilingual](https://img.shields.io/badge/Languages-فارسی%20%7C%20العربية-b45309?style=for-the-badge)](https://amiralisite.github.io/hazrat-abbas-ashura-3d/)
 
 <br />
 
-<img src="src/assets/images/shrine_hero_karbala_1795268593726.jpg" alt="بارگاه ملکوتی حضرت ابوالفضل العباس (ع)" width="100%" style="border-radius: 16px;" />
+<img src="docs/screenshots/01-hero-umm-al-banin-countdown.jpg" alt="شمارش معکوس شهادت حضرت ام‌البنین (س) و بارگاه حضرت ابوالفضل العباس (ع)" width="100%" />
 
 </div>
 
 ---
 
-## ✨ معرفی پروژه | About This Memorial Experience
+## 🌐 پیش‌نمایش آنلاین و دانلود مستقیم مدیا | Live Demo & Media Downloads
 
-یک تجربه وب سه‌بعدی، دوزبانه (**فارسی** و **العربية**) و دوحالته (**روزِ نینوا** / **شبِ حرم**) که با الهام از شکوه معماری آستان قدس عباسی در کربلای معلی و حماسه جاودانه عاشورا طراحی شده است. این وب‌سایت با پالت اختصاصی **عقیق سرخ، طلایی آستان و سرمه‌ای نیمه‌شب**، رندر بلادرنگ `Three.js` و انیمیشن‌های ظریف `Motion` ساخته شده است.
-
-### 🌐 پیش‌نمایش آنلاین (Live Site)
-👉 **[https://amiralisite.github.io/hazrat-abbas-ashura-3d/](https://amiralisite.github.io/hazrat-abbas-ashura-3d/)**
-
----
-
-## 🏛️ ویژگی‌ها و بخش‌های کلیدی
-
-- **صحنه سه‌بعدی پارالاکس در پس‌زمینه (`SacredKarbalaBackdrop3D`):** رندر بلادرنگ رواق‌های طاق‌دار متوالی، فانوس‌های برنجی معلق در حال تاب خوردن و ذرات نورانی معلق با واکنش نرم به حرکت ماوس و هماهنگ با تم روز و شب.
-- **نمایشگر سه‌بعدی Coverflow در بخش آغازین:** چرخش سه‌بعدی کارت‌های حرم مطهر، پرچم علمدار کربلا، صحن فیروزه‌ای و شریعه فرات در محور عمق (`rotateY` + `translateZ`).
-- **نوار ناوبری سه‌بعدی لوکس + منوی کشویی روان در موبایل و تبلت:** نوبار حجم‌دار دسکتاپ همراه با دکمه‌های تغییر **زبان (فارسی / العربية)** و **تم (روز / شب)** و منوی کشویی انیمیشنی (`Slide-Out 3D Drawer`) برای نمایشگرهای کوچک‌تر.
-- **چهار منزلِ جاودانه عاشورا (`KarbalaChronicle`):** روایت مصور تاریخی از پرچمداری، ردّ امان‌نامه شمر، فتح شریعه فرات و عروج آسمانی قمر بنی‌هاشم (ع).
-- **کتابخانه و رحل تعاملی احادیث (`HadithCollection`):** گردآوری رجزهای عاشورایی حضرت عباس (ع) و روایات امام سجاد (ع) و امام صادق (ع) با فیلتر موضوعی، خط ثلث/نسخ (`Amiri`) و قابلیت رونوشت سریع.
-- **نگارخانه موزائیکی سه‌بعدی (`KarbalaGallery`):** نمایش نامتقارن تصاویر مذهبی و حرم با افکت تغییر زاویه سه‌بعدی نسبت به مکان‌نما.
-- **زیارت عاشورا، برائت از قاتلین کربلا و تسبیح دایره‌ای (`ZiyaratTributeSection`):** متن زیارت مأثوره با لعن و برائت از ستمکاران کربلا (یزید، ابن زیاد، عمر سعد و شمر) همراه با شمارنده حلقوی سلام و لعن.
+- **🌐 وب‌سایت آنلاین (GitHub Pages):** [https://amiralisite.github.io/hazrat-abbas-ashura-3d/](https://amiralisite.github.io/hazrat-abbas-ashura-3d/)
+- **🎬 دانلود ویدیوی ۳ دقیقه‌ای معرفی سایت (HD 720p MP4 — آماده انتشار در لینکدین):** [دانلود مستقیم ویدیو (`hazrat-abbas-ashura-showcase-3min.mp4`)](https://github.com/amiraliSite/hazrat-abbas-ashura-3d/releases/download/v2.0-media/hazrat-abbas-ashura-showcase-3min.mp4)
+- **📦 دانلود یک‌کلیکی تمامی اسکرین‌شات‌های بخش‌های سایت (ZIP):** [دانلود فایل فشرده (`hazrat-abbas-ashura-screenshots.zip`)](https://github.com/amiraliSite/hazrat-abbas-ashura-3d/releases/download/v2.0-media/hazrat-abbas-ashura-screenshots.zip)
+- **🖼️ پوستر یکپارچه تمام بخش‌ها (۲×۵ Full Poster PNG):** [دانلود پوستر کامل (`hazrat-abbas-all-sections-showcase.png`)](https://github.com/amiraliSite/hazrat-abbas-ashura-3d/releases/download/v2.0-media/hazrat-abbas-all-sections-showcase.png)
 
 ---
 
-## 🖼️ نمایی از آثار بصری بخش‌ها
+## 🕯️ تازه‌ترین به‌روزرسانی: سوگواره و شمارش معکوس شهادت حضرت ام‌البنین (سلام‌الله‌علیها)
 
-| بین‌الحرمین مطهر | غروب عاشورا و علمدار کربلا |
+در آغازین بخش سایت، **بنر سه‌بعدی شمارش‌گر معکوس زنده (ساعت : دقیقه : ثانیه)** تا شام شهادت مادر بزرگوار حضرت ابوالفضل العباس (ع) — **حضرت ام‌البنین (سلام‌الله‌علیها)، ۱۳ جمادی‌الثانی** — قرار داده شده است و در ادامه، بخش ویژه **یادواره مادر چهار شهید کربلا** شامل:
+- معرفی چهار فرزند رشید ایشان (**حضرت ابوالفضل العباس، عبدالله، جعفر و عثمان علیهم‌السلام**) با انتخاب‌گر تعاملی
+- متن کامل مرثیه تاریخی بقیع با صدای سوزناک وفاداری به فرزندان زهرا (س): *«لَا تَدْعُونِي وَيْكِ أُمَّ الْبَنِينَ...»*
+- شمارنده آنلاین ذکر صلوات و هدیه فاتحه به روح مطهر حضرت ام‌البنین (س)
+- پشتیبانی کامل دوزبانه (**فارسی** و **العربية**) و هر دو حالت **شبِ حرم** و **روزِ نینوا**
+
+---
+
+## 🏛️ بخش‌های کامل وب‌سایت | Site Architecture
+
+1. **شمارش‌گر زنده شهادت حضرت ام‌البنین (س) و صحن ۳بعدی آغازین (`HeroShrine` + `UmmAlBaninCountdownBanner`):** نوار ناوبری ۳بعدی، پس‌زمینه بلادرنگ `Three.js` و گالری Coverflow حرم.
+2. **یادواره حضرت ام‌البنین (سلام‌الله‌علیها) (`UmmAlBaninSection`):** زندگینامه، چهار ستاره کربلا، مرثیه بقیع و ذکر صلوات تعاملی.
+3. **چهار منزل جاودانه عاشورا (`KarbalaChronicle`):** روایت مصور از پرچمداری و امان‌نامه تا شریعه فرات و عروج قمر بنی‌هاشم (ع).
+4. **رحل تعاملی احادیث و رجزها (`HadithCollection`):** احادیث معصومین و رجزهای حضرت عباس (ع) با فیلتر و رونوشت سریع.
+5. **نگارخانه موزائیکی ۳بعدی کربلا (`KarbalaGallery`):** نمایش نامتقارن تصاویر مذهبی با تغییر پرسپکتیو نسبت به مکان‌نما.
+6. **زیارت، برائت از قاتلین کربلا و تسبیح حلقوی (`ZiyaratTributeSection`):** متن زیارت مأثوره با لعن بر ستمکاران کربلا و شمارنده سلام.
+7. **امضای سازنده (`CreatorFooter`):** معرفی **امیرعلی محمدی (AmirAli Made)** با پیوند مستقیم به پروفایل گیت‌هاب.
+
+---
+
+## 📸 تصاویر تمامی بخش‌های سایت (از نسخه نهایی)
+
+| ۱. شمارش معکوس شهادت حضرت ام‌البنین (س) در صدر سایت | ۲. نمایشگر سه‌بعدی Coverflow حرم مطهر |
 | :---: | :---: |
-| <img src="src/assets/images/shrine_hero_karbala_1795268593726.jpg" width="420" /> | <img src="src/assets/images/ashura_alam_horizon_1795268593562.jpg" width="420" /> |
-| **ایوان طلا و صحن فیروزه‌ای** | **شریعه فرات و یادمان سقا** |
-| <img src="src/assets/images/karbala_shrine_courtyard_1795268593462.jpg" width="420" /> | <img src="src/assets/images/karbala_euphrates_waters_1795268593652.jpg" width="420" /> |
+| <img src="docs/screenshots/01-hero-umm-al-banin-countdown.jpg" alt="Hero & Countdown" width="440" /> | <img src="docs/screenshots/02-hero-3d-coverflow.jpg" alt="Hero 3D Coverflow" width="440" /> |
+| **۳. یادواره مادر چهار شهید کربلا — حضرت ام‌البنین (س)** | **۴. چهار منزل جاودانه عاشورا** |
+| <img src="docs/screenshots/03-umm-al-banin-memorial.jpg" alt="Umm al-Banin Memorial" width="440" /> | <img src="docs/screenshots/04-karbala-chronicle.jpg" alt="Karbala Chronicle" width="440" /> |
+| **۵. رحل تعاملی احادیث و رجزهای حضرت عباس (ع)** | **۶. نگارخانه موزائیکی سه‌بعدی کربلا** |
+| <img src="docs/screenshots/05-hadith-lectern.jpg" alt="Hadith Lectern" width="440" /> | <img src="docs/screenshots/06-karbala-mosaic-gallery.jpg" alt="Karbala Gallery" width="440" /> |
+| **۷. زیارت مأثوره، لعن قاتلین و تسبیح دایره‌ای** | **۸. امضای سازنده (امیرعلی محمدی — AmirAli Made)** |
+| <img src="docs/screenshots/07-ziyarat-oppressors-tasbih.jpg" alt="Ziyarat & Tasbih" width="440" /> | <img src="docs/screenshots/08-creator-footer-amirali.jpg" alt="Creator Footer" width="440" /> |
+| **۹. تم روشن روز نینوا (Day Theme)** | **۱۰. نسخه عربی با چیدمان راست‌به‌چپ (العربية RTL)** |
+| <img src="docs/screenshots/09-day-theme-shrine.jpg" alt="Day Theme" width="440" /> | <img src="docs/screenshots/10-arabic-rtl-countdown.jpg" alt="Arabic RTL" width="440" /> |
 
 ---
 
 ## 🛠️ فناوری‌های به‌کاررفته (Tech Stack)
 
-- **React 19 (JSX)** — معماری ماژولار کامپوننت‌ها
-- **Three.js (WebGL / PMREM / ACESFilmic)** — صحنه سه‌بعدی نورپردازی‌شده با تغییر نرم روز و شب
-- **Tailwind CSS v4** — استایل‌دهی مدرن و سطوح سه‌بعدی حجم‌دار (`@custom-variant dark`)
-- **Motion (Framer Motion)** — انیمیشن‌های سه‌بعدی کشو، کاورفلو و رحل حدیث
+- **React 19 (JSX)** — ساختار ماژولار کامپوننت‌ها و هوک‌های شمارش معکوس
+- **Three.js (WebGL / ACESFilmic)** — رندر سه‌بعدی رواق‌ها، فانوس‌ها و ذرات نورانی با تم روز و شب
+- **Tailwind CSS v4** — سطوح شیشه‌ای، عمق‌دهی ۳بعدی (`imperial-3d-panel`) و تم دوگانه (`@custom-variant dark`)
+- **Motion (Framer Motion)** — انیمیشن‌های سه‌بعدی کشوی موبایل، کاورفلو و رحل حدیث
 - **Google Fonts:** `Lalezar` • `Vazirmatn` • `Amiri`
 
 ---
@@ -61,17 +79,10 @@
 ## 🚀 راه‌اندازی محلی (Local Development)
 
 ```bash
-# کلون کردن مخزن
 git clone https://github.com/amiraliSite/hazrat-abbas-ashura-3d.git
 cd hazrat-abbas-ashura-3d
-
-# نصب وابستگی‌ها
 npm install
-
-# اجرای سرور توسعه
 npm run dev
-
-# ساخت نسخه نهایی
 npm run build
 ```
 
@@ -80,6 +91,7 @@ npm run build
 <div align="center">
 
 ### 💻 طراح و توسعه‌دهنده: **امیرعلی محمدی (AmirAli Made)**
+
 [![GitHub Profile](https://img.shields.io/badge/GitHub-amiraliSite-181717?style=for-the-badge&logo=github)](https://github.com/amiraliSite)
 
 </div>
